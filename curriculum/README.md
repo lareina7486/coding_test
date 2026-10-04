@@ -35,9 +35,9 @@ Judge 결과 + AI Review
 
 ```text
 curriculum/
-├─ days/          # Day 01~30: README + problems.yaml
+├─ days/          # Day 01~30: README + problems.json
 ├─ concepts/      # 주제별 선행 개념
-├─ db/            # problems / days / topics / progress JSON
+├─ db/            # 보조 인덱스/메타데이터(선택)
 ├─ submissions/   # 내 시도 코드
 ├─ solutions/     # 대표 풀이 + 대안 풀이
 ├─ ai/            # AI 채점/힌트/풀이비교 프롬프트와 schema
@@ -115,9 +115,7 @@ curriculum/
 
 ## DB
 
-- [`db/problem-index.json`](./db/problem-index.json): 373개 문제 Master
-- [`db/days.json`](./db/days.json): Day별 문제 배정
-- [`db/topics.json`](./db/topics.json): Concept/Topic registry
+각 Day 폴더의 `problems.json`이 실행용 Source of Truth다. Day별 README는 사람이 읽는 화면이고 JSON은 향후 웹/앱에서 바로 읽을 데이터다.
 
 ## 도구
 
