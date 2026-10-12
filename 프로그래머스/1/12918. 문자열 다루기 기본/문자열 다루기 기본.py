@@ -1,10 +1,5 @@
 def solution(s):
-    arr = [4,6]
-    answer = True
-    if len(s) in arr: # 48~57
-        for i in s:
-            if ord(i)>57:
-                answer = False
-        return answer
+    if len(s) in [4,6] and s.isdigit():
+        return True
     else:
         return False
