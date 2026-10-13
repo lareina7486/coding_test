@@ -3,7 +3,7 @@ def solution(s):
     answer = []
     
     for text in arr:
-        for i, alpha in enumerate(list(text)):
+        for i, alpha in enumerate(text):
             if i%2==0:
                 answer.append(alpha.upper())
             else:
