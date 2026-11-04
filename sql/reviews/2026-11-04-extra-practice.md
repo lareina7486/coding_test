@@ -1,8 +1,8 @@
 # 2026-11-04 Lv.1·Lv.2 추가 실전 문제 풀이 기록
 
 - 공식 출처: 프로그래머스 SQL 고득점 Kit (MySQL)
-- 기존 CH01~CH04(31개)와 겹치지 않는 **신규 공식 문제 23개**를 도전함.
-- **사용자가 작성한 최종 SQL 원문 22개**를 별도 파일로 저장. 대장균 1문제는 실제 작성/제출 코드가 없으므로 .sql 파일을 만들지 않음.
+- 기존 CH01~CH04(31개)와 겹치지 않는 **신규 공식 문제 24개**를 도전함.
+- **사용자가 작성한 최종 SQL 원문 23개**를 별도 파일로 저장. 대장균 1문제는 실제 작성/제출 코드가 없으므로 .sql 파일을 만들지 않음.
 - 150문제 강제 목표 폐기, 필요한 문제 선택 학습.
 - 상태는 '사이트 통과 보고', '코드 검토 적합', '미완료', '보완 권장'을 구분.
 - 동일 문제의 수정 전 코드는 오답 메모로 기록하고, .sql에는 사용자가 실제 작성한 최신 코드를 저장.
@@ -34,6 +34,7 @@
 | 21 | [입양 시각 구하기(1)](https://school.programmers.co.kr/learn/courses/30/lessons/59412) | Lv.2 | 오답 재풀이 → 코드 검토 정답, 사이트 미채점 | [59412.sql](../solutions/programmers/59412.sql) | HOUR, WHERE, BETWEEN, GROUP BY |
 | 22 | [성분으로 구분한 아이스크림 총 주문량](https://school.programmers.co.kr/learn/courses/30/lessons/133026) | Lv.2 | 코드 검토: 집계 적합·LEFT JOIN 매칭 가정 확인 | [133026.sql](../solutions/programmers/133026.sql) | JOIN, GROUP BY, SUM |
 | 23 | [3월에 태어난 여성 회원 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131120) | Lv.2 | 조건·정렬 적합·날짜 출력 형식 보완 권장, 사이트 미채점 | [131120.sql](../solutions/programmers/131120.sql) | MONTH, IS NOT NULL, DATE_FORMAT |
+| 24 | [월별 잡은 물고기 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/293260) | Lv.2 | 코드 검토 정답, 사이트 채점 미확인 | [293260.sql](../solutions/programmers/293260.sql) | MONTH, GROUP BY, COUNT, ORDER BY |
 
 ## 주요 오답·보완 사항
 
@@ -89,6 +90,10 @@ DATE 컬럼에는 연도 범위 조건도 학습 권장.
 
 공식 주의사항: 날짜 표시 예시 YYYY-MM-DD 필수. DATE_FORMAT(DATE_OF_BIRTH,'%Y-%m-%d') AS DATE_OF_BIRTH로 명시 권장.
 
+
+### 월별 잡은 물고기 수 구하기
+
+사용자 SQL은 `MONTH(TIME)` 기준으로 서로 다른 연도의 동일 월을 합쳐 집계. `GROUP BY`는 데이터에 존재하는 월만 만들기 때문에 빈 달은 제외되고 `MONTH()`는 정수 1~12를 반환. `ORDER BY MONTH`는 SELECT 별칭으로 오름차순 정렬. **실제 사이트 제출 결과는 미확인**.
 
 ## 오늘 전체 학습에서 중요한 개념
 
