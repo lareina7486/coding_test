@@ -1,0 +1,9 @@
+-- 방법 A: 집계함수
+SELECT MAX(DATETIME) AS '시간'
+FROM ANIMAL_INS;
+
+-- 방법 B: 정렬 후 한 행 조회 (사용자 대안)
+SELECT DATETIME AS '시간'
+FROM ANIMAL_INS
+ORDER BY DATETIME DESC
+LIMIT 1;

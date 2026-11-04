@@ -20,7 +20,8 @@
 sql/
 ├── README.md                   # 계획·진도·기록 원칙
 ├── chapters/                  # 완료한 챕터의 개념 요약·문제 목록·오답 기록
-│   └── 02-null-distinct-count.md  # CH02 완료 기록
+│   ├── 02-null-distinct-count.md  # CH02 완료 기록
+│   └── 03-aggregation-group-by-having.md  # CH03 완료 기록
 └── solutions/                 # 완료 챕터에서 실제 작성한 SQL
     ├── programmers/          # 실제 작성한 SQL 풀이 저장
     ├── solvesql/
@@ -35,10 +36,11 @@ CH02부터 실제 작성 SQL을 저장합니다. 미풀이 문제의 정답 파�
 | --- | --- | --- |
 | CH01 SELECT·WHERE·정렬·조건 검색 | 진행 중 | 01~15 도전, 09번 정렬 수정 후 최종 재제출 확인 대기 (이번 커밋에 미포함) |
 | **CH02 NULL·중복 제거·COUNT** | **완료** | **16~21번 6문제 코드 보관, 20번 오답 재풀이 완료** |
-| CH03 MAX·MIN·COUNT·GROUP BY·HAVING | 진행 중 | 22~24번 풀이 확인, 25~26번 미풀이 (이번 커밋에 미포함) |
+| **CH03 MAX·MIN·COUNT·GROUP BY·HAVING** | **완료(코드 검토)** | **22~26번 5문제 기록, 25·26번 수정 재풀이 완료. 25·26번 공식 채점 여부 미확인** |
 
 - 문제별 기록 상태는 **플랫폼에서 통과를 직접 보고한 문제**와 **SQL 코드만 검토한 문제**를 구분합니다.
 - CH02 요약: [02-null-distinct-count.md](chapters/02-null-distinct-count.md). SQL 원문은 `solutions/programmers/`에 저장했습니다.
+- CH03 요약: [03-aggregation-group-by-having.md](chapters/03-aggregation-group-by-having.md). 집계·GROUP BY·HAVING 문제의 사용자 작성 SQL과 오답 수정 과정 포함.
 - 원래 아래 표는 **학습계획 초안의 개념 분류**이며, 실제 진행 챕터 번호·순서는 위의 표를 우선합니다.
 
 ## 1회독: 전 범위 핵심 지도 (28시간/60문제 목표)
