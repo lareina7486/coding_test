@@ -1,88 +1,66 @@
-# SQL 학습 기록
+# SQL 학습 기록 — 실전 문제 중심, 반복 회독
 
-> 목표: SQL 전체 지도 → 기초 문제 1회독 → 전 범위 응용 2회독 → 추후 심화/PCSQL.
->
-> 시작 계획: 2026-11-04 ~ 2026-11-15 집중 과정 (1회독 28시간/60문제, 2회독 37시간/90문제). **시간과 문항 수는 목표치**이며, 실제 수행 기록과 구분합니다.
+**업데이트: 2026-11-04 · MySQL 기반**  
+목표: 프로그래머스 SQL 고득점 Kit의 주요 문법 습득 → 응용 SQL 실력 확보 → 이후 LeetCode/SolveSQL 및 PCSQL 수준 문제 선택 학습.
 
-## 기록 원칙
+## 운영 원칙
 
-1. **문제 1개마다 커밋하지 않습니다.** 한 챕터의 학습과 풀이가 끝난 뒤 한 번에 정리해서 반영합니다.
-2. 온라인 문제는 **실제 사이트 원본**만 풉니다. 출처·문제 제목·원본 링크·플랫폼 문제 ID를 기록합니다. 챗봇이 만드는 문제는 기초 문법 확인용에만 한정하고 외부 사이트 문제로 표시하지 않습니다.
-3. **직접 작성한 SQL 풀이**를 저장합니다. 정답 예시를 읽기만 한 경우 '해설 참고'로 구분하고, 실제로 제출·통과한 경우에만 '통과'로 기록합니다.
-4. 챕터 요약에 핵심 문법, 대표 풀이, 오답 원인, 다시 풀 문제, 새로 연결한 개념을 남깁니다.
-5. DB 방언(MySQL/SQLite 등)과 실행 환경을 표기합니다. 직접 실행하지 않은 쿼리를 '실행 검증'으로 기록하지 않습니다.
-6. 이미 푼 문제의 **복습**과 **신규 문제** 수를 분리해 기록합니다.
-7. 챕터 종료 시 **챕터 요약 + 해당 챕터 솔루션 + 진도표**를 모아 한 번의 Git 커밋으로 반영합니다.
+1. **150문제를 숫자로 채우는 고정 목표는 폐기.** 그때그때 부족한 개념에 맞추어 실제 공식 문제를 선정합니다.
+2. 새로운 문법은 **문제에 앞서 설명**하고, 난이도는 이해도에 따라 조절합니다.
+3. 기본 문법을 이해시키는 아주 쉬운 자체 예제는 허용. 이외의 연습 문제는 실제 사이트의 원문과 URL 사용.
+4. 사용자가 **직접 제출한 SQL 원문**을 저장. AI가 제안한 개선안/모범답안과 섞지 않습니다.
+5. 플랫폼 통과 보고 / 코드상 적합 / 재풀이 필요 / 미제출을 별도 표기. 실제 플랫폼을 대신 실행한 적은 없으므로 실행 통과를 추정하지 않습니다.
+6. 평소에는 **챕터 완료 시 1회 일괄 커밋**. 2026-11-04에는 사용자의 명시적 요청에 따라 수업 종료 시점의 **전체 학습 스냅샷을 1회 커밋**합니다.
+7. 이미 푼 문제의 복습은 신규 문제 도전 수로 중복 계산하지 않습니다.
 
-## 디렉터리 구상
+## 진행 현황 (2026-11-04)
 
-```text
-sql/
-├── README.md                   # 계획·진도·기록 원칙
-├── chapters/                  # 완료한 챕터의 개념 요약·문제 목록·오답 기록
-│   ├── 02-null-distinct-count.md  # CH02 완료 기록
-│   ├── 03-aggregation-group-by-having.md  # CH03 완료 기록
-│   └── 04-joins.md                # CH04 완료 기록
-└── solutions/                 # 완료 챕터에서 실제 작성한 SQL
-    ├── programmers/          # 실제 작성한 SQL 풀이 저장
-    ├── solvesql/
-    └── leetcode/
-```
-
-CH02부터 실제 작성 SQL을 저장합니다. 미풀이 문제의 정답 파일은 만들지 않습니다.
-
-## 실제 학습 진행 현황 (2026-11-04)
-
-| 실제 진행 챕터 | 상태 | 문제 기록 |
+| 과정 | 상태 | 메모 |
 | --- | --- | --- |
-| CH01 SELECT·WHERE·정렬·조건 검색 | 진행 중 | 01~15 도전, 09번 정렬 수정 후 최종 재제출 확인 대기 (이번 커밋에 미포함) |
-| **CH02 NULL·중복 제거·COUNT** | **완료** | **16~21번 6문제 코드 보관, 20번 오답 재풀이 완료** |
-| **CH03 MAX·MIN·COUNT·GROUP BY·HAVING** | **완료(코드 검토)** | **22~26번 5문제 기록, 25·26번 수정 재풀이 완료. 25·26번 공식 채점 여부 미확인** |
-| **CH04 INNER·OUTER JOIN** | **완료** | **27~31번 5문제 저장, 31번 수정 후 플랫폼 통과 보고. 29·30번 코드 검토, 플랫폼 채점 미확인** |
+| CH01 SELECT·WHERE·정렬 | **부분 진행** | 01~15 도전; 09 정렬 수정 후 사이트 재확인 필요. 이용 가능한 이전 기록은 [01-select-where-progress.md](chapters/01-select-where-progress.md)에 요약 |
+| CH02 NULL·DISTINCT·COUNT | **학습 완료** | 16~21 여섯 문제, [요약](chapters/02-null-distinct-count.md) |
+| CH03 집계·GROUP BY·HAVING | **학습 완료** | 22~26 다섯 문제, [요약](chapters/03-aggregation-group-by-having.md) |
+| CH04 JOIN | **학습 완료** | 27~31 다섯 문제, [요약](chapters/04-joins.md) |
+| **Lv.1/Lv.2 추가 실전** | **23문제 도전 / 원문 SQL 22개 저장** | [당일 학습기록](reviews/2026-11-04-extra-practice.md). 1문제는 미제출 |
+| CH05 서브쿼리 | **개념 학습·문제 미제출** | [진행 기록](chapters/05-subqueries-progress.md) |
 
-- 문제별 기록 상태는 **플랫폼에서 통과를 직접 보고한 문제**와 **SQL 코드만 검토한 문제**를 구분합니다.
-- CH02 요약: [02-null-distinct-count.md](chapters/02-null-distinct-count.md). SQL 원문은 `solutions/programmers/`에 저장했습니다.
-- CH03 요약: [03-aggregation-group-by-having.md](chapters/03-aggregation-group-by-having.md). 집계·GROUP BY·HAVING 문제의 사용자 작성 SQL과 오답 수정 과정 포함.
-- CH04 요약: [04-joins.md](chapters/04-joins.md). JOIN 5문제 코드·31번 오류 및 수정 사항 기록.
-- 원래 아래 표는 **학습계획 초안의 개념 분류**이며, 실제 진행 챕터 번호·순서는 위의 표를 우선합니다.
+**누적 도전 문제: 54개** = CH01~CH04에서 도전 31개 + 추가 신규 23개.  
+이 수치는 **도전한 서로 다른 공식 문제 수**이며, 정답/제출 통과 수가 아닙니다. 기존 대화의 52개 카운트는 '성분으로 구분한 아이스크림 총 주문량' 1개를 추가로 세지 않은 것이므로 정정합니다. 이번 '3월에 태어난 여성 회원'은 별도 신규 1개입니다.
 
-## 1회독: 전 범위 핵심 지도 (28시간/60문제 목표)
+## 현재 다시 풀거나 확인할 문제
 
-| 챕터 | 핵심 범위 | 진행 |
-| --- | --- | --- |
-| 01 | SQL 전체 지도 · DB·테이블·자료형·처리 흐름 | 예정 |
-| 02 | SELECT·FROM·WHERE·연산자·LIKE·IN·BETWEEN | 예정 |
-| 03 | ORDER BY·LIMIT·DISTINCT | 예정 |
-| 04 | NULL·COALESCE·IFNULL·CASE | 예정 |
-| 05 | 집계함수·GROUP BY·HAVING | 예정 |
-| 06 | PK·FK·INNER/LEFT/SELF JOIN | 예정 |
-| 07 | 서브쿼리·IN·EXISTS·NOT EXISTS | 예정 |
-| 08 | 문자열·날짜·숫자·형변환 함수 | 예정 |
-| 09 | UNION·UNION ALL·집합 연산 | 예정 |
-| 10 | WITH·CTE | 예정 |
-| 11 | 윈도우 함수·순위·누적합·LAG·LEAD | 예정 |
-| 12 | 재귀 CTE·계층형 데이터 | 예정 |
-| 13 | INSERT·UPDATE·DELETE·트랜잭션 개요 | 예정 |
+- CH01 09번 정렬 조건 수정 후 최종 플랫폼 판정 확인
+- Lv.1 [자동차 대여 기록에서 장기/단기 대여 구분하기](https://school.programmers.co.kr/learn/courses/30/lessons/151138): DATE_FORMAT까지 출력 형식 보완
+- Lv.1 [특정 형질을 가지는 대장균 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/301646): 비트 AND 학습 후 최초 제출
+- Lv.2 [카테고리 별 상품 개수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/131529): ORDER BY CATEGORY로 안정성 재검토(사용자 정답 보고는 그대로 유지)
+- Lv.2 [3월에 태어난 여성 회원 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131120): 생년월일 출력 형식 확인
+- Lv.2 [성분으로 구분한 아이스크림 총 주문량](https://school.programmers.co.kr/learn/courses/30/lessons/133026): LEFT/INNER JOIN의 매칭 가정 확인
+- 출력 날짜 형식이 지정된 기타 문제의 사이트 통과 여부는 필요 시 추가 확인
 
-## 2회독: 전 범위 응용 (37시간/90문제 목표)
+## 이후 학습 지도 (문항 수·마감일 강제하지 않음)
 
-1회독과 같은 범위를 다시 순환하면서 복합 조건·조건부 집계·다중 JOIN·상관 서브쿼리·날짜 가공·CTE·윈도우 함수를 결합합니다. **새로운 사이트 문제**를 사용하고, 이전에 푼 문제는 별도 복습 기록으로 계산합니다.
+| 순서 | 학습 주제 | 새 문법 / 확인할 내용 | 실제 공식 문제 후보 |
+| --- | --- | --- | --- |
+| 1 | **CH05 서브쿼리** | 스칼라/테이블 서브쿼리, IN, EXISTS, NOT EXISTS, 상관 서브쿼리, NOT IN·NULL | [업그레이드 된 아이템 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/273711), [업그레이드 할 수 없는 아이템 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/273712), [즐겨찾기가 가장 많은 식당 정보 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131123) |
+| 2 | 날짜·문자열·조건 분기 | DATE_FORMAT, YEAR/MONTH/HOUR, DATEDIFF, LEFT/SUBSTR, CASE, COALESCE, REGEXP | [자동차 평균 대여 기간 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/157342), [조건별로 분류하여 주문상태 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131113) 등 실제 문제 |
+| 3 | 조건부 집계·JOIN 심화 | 조건부 SUM/COUNT, HAVING, 중복 제거, 다중 JOIN, anti-join, JOIN 매칭 카디널리티 | [저자 별 카테고리 별 매출액 집계하기](https://school.programmers.co.kr/learn/courses/30/lessons/144856) 등 |
+| 4 | 집합·CTE | UNION/UNION ALL, WITH, 여러 단계의 가공 | [오프라인/온라인 판매 데이터 통합하기](https://school.programmers.co.kr/learn/courses/30/lessons/131537) 등 |
+| 5 | 윈도우 함수 | OVER/PARTITION BY, ROW_NUMBER, RANK, DENSE_RANK, LAG/LEAD, 누적합 | LeetCode/SolveSQL 공식 문제 중 수준에 맞춰 선정 |
+| 6 | 재귀 CTE·계층형 관계 | WITH RECURSIVE, 부모·자식 탐색, 종료 조건 | [특정 세대의 대장균 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/301650) 등 |
+| 7 | 비트 연산 | 비트 AND (&), 마스크 판별, 논리 우선순위 | 앞서 보류한 [특정 형질을 가지는 대장균 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/301646)부터 진행 |
+| 8 | SQL 실무/성능 기초 | PK/FK, 인덱스, EXPLAIN, DB 실행 계획, DML, 트랜잭션/격리 수준 | 별도 실습 + 공식 문제 |
+| 9 | 응용 2회독 | Lv.3~Lv.5, 종합 JOIN/집계/서브쿼리, LeetCode SQL 50, SolveSQL | 약한 주제만 선정, 이전 문제는 복습으로 분리 |
 
-## 활용 사이트
+이 로드맵의 **단계와 문항은 필요에 따라 조절 가능**합니다. 고급 실습은 새 문법 소개 후 시작합니다.
+
+## 디렉터리
+
+- `sql/chapters/`: 완료/진행 챕터 기록
+- `sql/solutions/programmers/`: 직접 작성한 공식 문제 SQL
+- `sql/reviews/`: 여러 챕터에 걸친 추가 풀이·복습 기록
+
+## 공식 문제 사이트
 
 - [프로그래머스 SQL 고득점 Kit](https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit)
-- [SolveSQL](https://solvesql.com/problems/)
 - [LeetCode SQL 50](https://leetcode.com/studyplan/top-sql-50/)
-
-## 챕터 완료 보고서 형식
-
-챕터 종료 시 `sql/chapters/`에 다음 형식으로 기록합니다.
-
-- **학습일/회독/소요시간**: 실제 수행한 내용만
-- **문제 기록**: 사이트, 실제 문제명, 링크, 난이도, 작성 SQL 파일, 결과(통과/오답/해설 참고/미제출)
-- **핵심 개념**: 처음 배운 문법과 기존 개념과의 연결
-- **오답 분석**: 실패 원인, 수정 사항, 주의할 반례
-- **재풀이 목록**: 2일 후/7일 후 재확인 대상
-- **완료 기준**: 해당 챕터 주요 문법 설명 가능 + 선택한 기본 문제 풀이 경험
-
-> 실제로 완료한 챕터는 위의 '실제 학습 진행 현황'과 해당 챕터 파일을 기준으로 확인합니다.
+- [SolveSQL](https://solvesql.com/problems/)
