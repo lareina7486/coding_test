@@ -1,6 +1,6 @@
 # SQL 학습 기록 — 실전 문제 중심, 반복 회독
 
-**업데이트: 2026-11-04 · MySQL 기반**  
+**업데이트: 2026-11-05 · MySQL 기반**  
 목표: 프로그래머스 SQL 고득점 Kit의 주요 문법 습득 → 응용 SQL 실력 확보 → 이후 LeetCode/SolveSQL 및 PCSQL 수준 문제 선택 학습.
 
 ## 운영 원칙
@@ -22,9 +22,11 @@
 | CH03 집계·GROUP BY·HAVING | **학습 완료** | 22~26 다섯 문제, [요약](chapters/03-aggregation-group-by-having.md) |
 | CH04 JOIN | **학습 완료** | 27~31 다섯 문제, [요약](chapters/04-joins.md) |
 | **Lv.1/Lv.2 추가 실전** | **24문제 도전 / 원문 SQL 23개 저장** | [당일 학습기록](reviews/2026-11-04-extra-practice.md). 1문제는 미제출 |
-| CH05 서브쿼리 | **개념 학습·문제 미제출** | 다음 학습 시작점: 2026-11-05, [진행 기록](chapters/05-subqueries-progress.md) |
+| CH05 날짜·문자열·CASE | **첫 번째 묶음 4문제 완료 · 챕터 진행 중** | [4문제 SQL·채점·오답 기록](chapters/05-date-string-case.md): 1 플랫폼 통과, 2·3 코드 검토 정답, 4 기본 풀이 적합(정밀도 주의) |
+| CH06~09 응용·비트연산·실무·윈도우 함수 | 예정 | 주제별 공식 문제 연습 |
+| CH10 서브쿼리·CTE·UNION·재귀 CTE | **후반부 심화로 보류** | [기존 서브쿼리 학습 기록](chapters/10-subqueries-cte-progress.md), 개념 퀴즈까지 진행·공식 문제 미제출 |
 
-**누적 도전 문제: 55개** = CH01~CH04에서 도전 31개 + 추가 신규 24개.  
+**누적 도전 문제: 67개** = 기존 55개 + 2026-11-05 별도 응용 문제 8개 + 이번 CH05 신규 문제 4개. 단, 이 커밋은 **CH05 첫 실전 묶음 4문제만** 보관합니다.  
 이 수치는 **도전한 서로 다른 공식 문제 수**이며, 정답/제출 통과 수가 아닙니다. 기존 대화의 52개 카운트는 '성분으로 구분한 아이스크림 총 주문량' 1개를 추가로 세지 않은 것이므로 정정합니다. 이번 '3월에 태어난 여성 회원'과 '월별 잡은 물고기 수 구하기'는 각각 별도 신규 문제입니다.
 
 ## 현재 다시 풀거나 확인할 문제
@@ -41,15 +43,13 @@
 
 | 순서 | 학습 주제 | 새 문법 / 확인할 내용 | 실제 공식 문제 후보 |
 | --- | --- | --- | --- |
-| 1 | **CH05 서브쿼리** | 스칼라/테이블 서브쿼리, IN, EXISTS, NOT EXISTS, 상관 서브쿼리, NOT IN·NULL | [업그레이드 된 아이템 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/273711), [업그레이드 할 수 없는 아이템 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/273712), [즐겨찾기가 가장 많은 식당 정보 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131123) |
-| 2 | 날짜·문자열·조건 분기 | DATE_FORMAT, YEAR/MONTH/HOUR, DATEDIFF, LEFT/SUBSTR, CASE, COALESCE, REGEXP | [자동차 평균 대여 기간 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/157342), [조건별로 분류하여 주문상태 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131113) 등 실제 문제 |
-| 3 | 조건부 집계·JOIN 심화 | 조건부 SUM/COUNT, HAVING, 중복 제거, 다중 JOIN, anti-join, JOIN 매칭 카디널리티 | [저자 별 카테고리 별 매출액 집계하기](https://school.programmers.co.kr/learn/courses/30/lessons/144856) 등 |
-| 4 | 집합·CTE | UNION/UNION ALL, WITH, 여러 단계의 가공 | [오프라인/온라인 판매 데이터 통합하기](https://school.programmers.co.kr/learn/courses/30/lessons/131537) 등 |
-| 5 | 윈도우 함수 | OVER/PARTITION BY, ROW_NUMBER, RANK, DENSE_RANK, LAG/LEAD, 누적합 | LeetCode/SolveSQL 공식 문제 중 수준에 맞춰 선정 |
-| 6 | 재귀 CTE·계층형 관계 | WITH RECURSIVE, 부모·자식 탐색, 종료 조건 | [특정 세대의 대장균 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/301650) 등 |
-| 7 | 비트 연산 | 비트 AND (&), 마스크 판별, 논리 우선순위 | 앞서 보류한 [특정 형질을 가지는 대장균 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/301646)부터 진행 |
-| 8 | SQL 실무/성능 기초 | PK/FK, 인덱스, EXPLAIN, DB 실행 계획, DML, 트랜잭션/격리 수준 | 별도 실습 + 공식 문제 |
-| 9 | 응용 2회독 | Lv.3~Lv.5, 종합 JOIN/집계/서브쿼리, LeetCode SQL 50, SolveSQL | 약한 주제만 선정, 이전 문제는 복습으로 분리 |
+| 1 | **CH05 날짜·문자열·CASE** | QUARTER, DATE_FORMAT, YEAR/MONTH, DATEDIFF/TIMESTAMPDIFF, CONCAT, CASE, NULL | [CH05 실전 4문제](chapters/05-date-string-case.md), 이후 문자열 포맷 문제 |
+| 2 | CH06 GROUP BY·JOIN 응용 심화 | 조건부 집계, 다중 JOIN, anti-join, 중복 행 제거 | 미풀이 공식 Lv.2~3 문제 |
+| 3 | CH07 비트 연산·조건 분류 | 비트 AND(&), 마스크 판별, CASE 분류 | [특정 형질을 가지는 대장균 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/301646) 등 |
+| 4 | CH08 실무 SQL | PK/FK, 인덱스, EXPLAIN, INSERT·UPDATE·DELETE, 트랜잭션 | 실무 실습 |
+| 5 | CH09 윈도우 함수 | OVER, PARTITION BY, ROW_NUMBER, RANK, LAG/LEAD, 누적합 | Lv.3 응용 및 LeetCode/SolveSQL |
+| 6 | **CH10 서브쿼리·CTE·집합·재귀** | Scalar/IN/EXISTS/NOT EXISTS, 상관, WITH, UNION, WITH RECURSIVE | [서브쿼리 진행 기록](chapters/10-subqueries-cte-progress.md)과 기존 공식 문제 후보 |
+| 7 | 응용 2회독 | Lv.3~Lv.5 문제, 복합 SQL, LeetCode SQL 50, SolveSQL | 약한 주제 중심, 신규/복습 구별 |
 
 이 로드맵의 **단계와 문항은 필요에 따라 조절 가능**합니다. 고급 실습은 새 문법 소개 후 시작합니다.
 
@@ -64,3 +64,10 @@
 - [프로그래머스 SQL 고득점 Kit](https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit)
 - [LeetCode SQL 50](https://leetcode.com/studyplan/top-sql-50/)
 - [SolveSQL](https://solvesql.com/problems/)
+
+## 2026-11-05 기록 범위 주의
+
+- 공식 신규 도전 수는 현재까지 **67문제** (실제 사이트 정답 통과 수와 다름).
+- 11/05 앞선 8개 응용 실전 문제는 이 커밋의 SQL 파일에 포함하지 않았으며, 추후 해당 주제 묶음에서 상태별로 보관 예정.
+- 이번 CH05 4문제는 사용자 SQL 원문과 실제 채점 상태를 [별도 챕터 파일](chapters/05-date-string-case.md)로 기록.
+- 서브쿼리 학습 기록은 CH10으로 이관, 공식 서브쿼리 문제는 아직 미제출.
