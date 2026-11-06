@@ -1,6 +1,6 @@
 -- 코드를 입력하세요
 SELECT product.PRODUCT_ID, product.PRODUCT_NAME,
-    SUM(product.PRICE*orders.AMOUNT) AS TOTAL_SALES
+    SUM(orders.AMOUNT)*product.PRICE AS TOTAL_SALES
 FROM FOOD_PRODUCT AS product
 INNER JOIN FOOD_ORDER As orders
     ON product.PRODUCT_ID=orders.PRODUCT_ID
