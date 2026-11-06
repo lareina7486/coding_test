@@ -1,6 +1,6 @@
 # SQL 학습 기록 — 실전 문제 중심, 반복 회독
 
-**업데이트: 2026-11-05 · MySQL 기반**  
+**업데이트: 2026-11-06 · MySQL 기반**  
 목표: 프로그래머스 SQL 고득점 Kit의 주요 문법 습득 → 응용 SQL 실력 확보 → 이후 LeetCode/SolveSQL 및 PCSQL 수준 문제 선택 학습.
 
 ## 운영 원칙
@@ -13,29 +13,26 @@
 6. 평소에는 **챕터 완료 시 1회 일괄 커밋**. 2026-11-04에는 사용자의 명시적 요청에 따라 수업 종료 시점의 **전체 학습 스냅샷을 1회 커밋**합니다.
 7. 이미 푼 문제의 복습은 신규 문제 도전 수로 중복 계산하지 않습니다.
 
-## 진행 현황 (2026-11-04)
+## 진행 현황 (2026-11-06)
 
 | 과정 | 상태 | 메모 |
 | --- | --- | --- |
-| CH01 SELECT·WHERE·정렬 | **부분 진행** | 01~15 도전; 09 정렬 수정 후 사이트 재확인 필요. 이용 가능한 이전 기록은 [01-select-where-progress.md](chapters/01-select-where-progress.md)에 요약 |
+| CH01 SELECT·WHERE·정렬 | **기록된 15문제 점검 완료** | 09번 [이름에 el이 들어가는 동물 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59047) 2026-11-06 사이트 통과 보고; [진행 기록](chapters/01-select-where-progress.md) |
 | CH02 NULL·DISTINCT·COUNT | **학습 완료** | 16~21 여섯 문제, [요약](chapters/02-null-distinct-count.md) |
 | CH03 집계·GROUP BY·HAVING | **학습 완료** | 22~26 다섯 문제, [요약](chapters/03-aggregation-group-by-having.md) |
 | CH04 JOIN | **학습 완료** | 27~31 다섯 문제, [요약](chapters/04-joins.md) |
 | **Lv.1/Lv.2 추가 실전** | **24문제 도전 / 원문 SQL 23개 저장** | [당일 학습기록](reviews/2026-11-04-extra-practice.md). 1문제는 미제출 |
-| CH05 날짜·문자열·CASE | **첫 번째 묶음 4문제 완료 · 챕터 진행 중** | [4문제 SQL·채점·오답 기록](chapters/05-date-string-case.md): 1 플랫폼 통과, 2·3 코드 검토 정답, 4 기본 풀이 적합(정밀도 주의) |
+| CH05 날짜·문자열·CASE | **계획된 실전 8/8문제 완료** | [8문제 SQL·채점·오답 기록](chapters/05-date-string-case.md): 첫 묶음 4개 + 두 번째 묶음 4개(모두 사용자 플랫폼 통과 보고) |
 | CH06~09 응용·비트연산·실무·윈도우 함수 | 예정 | 주제별 공식 문제 연습 |
 | CH10 서브쿼리·CTE·UNION·재귀 CTE | **후반부 심화로 보류** | [기존 서브쿼리 학습 기록](chapters/10-subqueries-cte-progress.md), 개념 퀴즈까지 진행·공식 문제 미제출 |
 
-**누적 도전 문제: 67개** = 기존 55개 + 2026-11-05 별도 응용 문제 8개 + 이번 CH05 신규 문제 4개. 단, 이 커밋은 **CH05 첫 실전 묶음 4문제만** 보관합니다.  
+**누적 도전 문제: 68개** = 이전 67개 + 신규 [조건에 맞는 사용자 정보 조회하기(164670)](https://school.programmers.co.kr/learn/courses/30/lessons/164670) 1개. 2026-11-06 CH05 두 번째 묶음의 나머지 3개는 이전에 도전한 문제의 **재풀이**로 중복 집계하지 않습니다.  
 이 수치는 **도전한 서로 다른 공식 문제 수**이며, 정답/제출 통과 수가 아닙니다. 기존 대화의 52개 카운트는 '성분으로 구분한 아이스크림 총 주문량' 1개를 추가로 세지 않은 것이므로 정정합니다. 이번 '3월에 태어난 여성 회원'과 '월별 잡은 물고기 수 구하기'는 각각 별도 신규 문제입니다.
 
 ## 현재 다시 풀거나 확인할 문제
 
-- CH01 09번 정렬 조건 수정 후 최종 플랫폼 판정 확인
-- Lv.1 [자동차 대여 기록에서 장기/단기 대여 구분하기](https://school.programmers.co.kr/learn/courses/30/lessons/151138): DATE_FORMAT까지 출력 형식 보완
 - Lv.1 [특정 형질을 가지는 대장균 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/301646): 비트 AND 학습 후 최초 제출
 - Lv.2 [카테고리 별 상품 개수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/131529): ORDER BY CATEGORY로 안정성 재검토(사용자 정답 보고는 그대로 유지)
-- Lv.2 [3월에 태어난 여성 회원 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131120): 생년월일 출력 형식 확인
 - Lv.2 [성분으로 구분한 아이스크림 총 주문량](https://school.programmers.co.kr/learn/courses/30/lessons/133026): LEFT/INNER JOIN의 매칭 가정 확인
 - 출력 날짜 형식이 지정된 기타 문제의 사이트 통과 여부는 필요 시 추가 확인
 
@@ -43,7 +40,7 @@
 
 | 순서 | 학습 주제 | 새 문법 / 확인할 내용 | 실제 공식 문제 후보 |
 | --- | --- | --- | --- |
-| 1 | **CH05 날짜·문자열·CASE** | QUARTER, DATE_FORMAT, YEAR/MONTH, DATEDIFF/TIMESTAMPDIFF, CONCAT, CASE, NULL | [CH05 실전 4문제](chapters/05-date-string-case.md), 이후 문자열 포맷 문제 |
+| 1 | **CH05 날짜·문자열·CASE** | QUARTER, DATE_FORMAT, YEAR/MONTH, DATEDIFF, CONCAT, SUBSTR, CASE, NULL | **8/8 공식문제 풀이 완료**, [기록](chapters/05-date-string-case.md) |
 | 2 | CH06 GROUP BY·JOIN 응용 심화 | 조건부 집계, 다중 JOIN, anti-join, 중복 행 제거 | 미풀이 공식 Lv.2~3 문제 |
 | 3 | CH07 비트 연산·조건 분류 | 비트 AND(&), 마스크 판별, CASE 분류 | [특정 형질을 가지는 대장균 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/301646) 등 |
 | 4 | CH08 실무 SQL | PK/FK, 인덱스, EXPLAIN, INSERT·UPDATE·DELETE, 트랜잭션 | 실무 실습 |
@@ -65,9 +62,14 @@
 - [LeetCode SQL 50](https://leetcode.com/studyplan/top-sql-50/)
 - [SolveSQL](https://solvesql.com/problems/)
 
-## 2026-11-05 기록 범위 주의
+## 2026-11-06 기록 범위 주의
 
-- 공식 신규 도전 수는 현재까지 **67문제** (실제 사이트 정답 통과 수와 다름).
+- 공식 신규 도전 수는 현재까지 **68문제** (실제 사이트 정답 통과 수와 다름).
 - 11/05 앞선 8개 응용 실전 문제는 이 커밋의 SQL 파일에 포함하지 않았으며, 추후 해당 주제 묶음에서 상태별로 보관 예정.
-- 이번 CH05 4문제는 사용자 SQL 원문과 실제 채점 상태를 [별도 챕터 파일](chapters/05-date-string-case.md)로 기록.
+- CH05의 두 차례 묶음 총 8문제는 사용자 SQL 원문과 채점 상태를 [별도 챕터 파일](chapters/05-date-string-case.md)로 기록. 2026-11-06 두 번째 묶음은 네 문제 모두 사용자 플랫폼 통과 보고.
 - 서브쿼리 학습 기록은 CH10으로 이관, 공식 서브쿼리 문제는 아직 미제출.
+
+## 2026-11-06 다음 학습: CH06 GROUP BY·JOIN 응용
+
+- 바로 이어서: [가격대 별 상품 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131530), [카테고리 별 도서 판매량](https://school.programmers.co.kr/learn/courses/30/lessons/144855), [조건에 맞는 사용자와 총 거래금액](https://school.programmers.co.kr/learn/courses/30/lessons/164668), [자동차 대여중/대여 가능 여부](https://school.programmers.co.kr/learn/courses/30/lessons/157340), [저자 별 카테고리 별 매출액](https://school.programmers.co.kr/learn/courses/30/lessons/144856) (Lv.4 도전).
+- 서브쿼리 의존 문제는 CH10 후반부로 미룸. CH06 문제는 사용자가 직접 작성하기 전 모범 SQL 비공개.

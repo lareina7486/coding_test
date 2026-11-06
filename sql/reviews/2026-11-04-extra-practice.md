@@ -20,7 +20,7 @@
 | 7 | [평균 일일 대여 요금 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/151136) | Lv.1 | 코드 검토 정답 | [151136.sql](../solutions/programmers/151136.sql) | AVG, ROUND |
 | 8 | [잡은 물고기의 평균 길이 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/293259) | Lv.1 | 코드 검토 정답 | [293259.sql](../solutions/programmers/293259.sql) | IFNULL, AVG |
 | 9 | [한 해에 잡은 물고기 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/298516) | Lv.1 | 코드 검토 정답 | [298516.sql](../solutions/programmers/298516.sql) | DATE/LIKE |
-| 10 | [자동차 대여 기록에서 장기/단기 대여 구분하기](https://school.programmers.co.kr/learn/courses/30/lessons/151138) | Lv.1 | 미완료: 기간 계산 수정, DATE_FORMAT 출력 미수정 | [151138.sql](../solutions/programmers/151138.sql) | DATEDIFF, CASE, DATE_FORMAT |
+| 10 | [자동차 대여 기록에서 장기/단기 대여 구분하기](https://school.programmers.co.kr/learn/courses/30/lessons/151138) | Lv.1 | **2026-11-06 재제출 후 사용자 사이트 정답 통과 보고** | [151138.sql](../solutions/programmers/151138.sql) | DATEDIFF, CASE, DATE_FORMAT |
 | 11 | [가장 큰 물고기 10마리 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/298517) | Lv.1 | 코드 검토 정답 | [298517.sql](../solutions/programmers/298517.sql) | 복합 ORDER BY |
 | 12 | [조건에 부합하는 중고거래 댓글 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/164673) | Lv.1 | 코드 검토 정답(날짜 표현은 플랫폼 확인 권장) | [164673.sql](../solutions/programmers/164673.sql) | JOIN, 날짜 형식 |
 | 13 | [특정 형질을 가지는 대장균 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/301646) | Lv.1 | 풀이 보류·미제출 | 미제출 | 비트 AND, 비트마스크 |
@@ -33,7 +33,7 @@
 | 20 | [자동차 종류 별 특정 옵션이 포함된 자동차 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/151137) | Lv.2 | 코드 검토 정답 | [151137.sql](../solutions/programmers/151137.sql) | OR, GROUP BY |
 | 21 | [입양 시각 구하기(1)](https://school.programmers.co.kr/learn/courses/30/lessons/59412) | Lv.2 | 오답 재풀이 → 코드 검토 정답, 사이트 미채점 | [59412.sql](../solutions/programmers/59412.sql) | HOUR, WHERE, BETWEEN, GROUP BY |
 | 22 | [성분으로 구분한 아이스크림 총 주문량](https://school.programmers.co.kr/learn/courses/30/lessons/133026) | Lv.2 | 코드 검토: 집계 적합·LEFT JOIN 매칭 가정 확인 | [133026.sql](../solutions/programmers/133026.sql) | JOIN, GROUP BY, SUM |
-| 23 | [3월에 태어난 여성 회원 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131120) | Lv.2 | 조건·정렬 적합·날짜 출력 형식 보완 권장, 사이트 미채점 | [131120.sql](../solutions/programmers/131120.sql) | MONTH, IS NOT NULL, DATE_FORMAT |
+| 23 | [3월에 태어난 여성 회원 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131120) | Lv.2 | **2026-11-06 재제출 후 사용자 사이트 정답 통과 보고** | [131120.sql](../solutions/programmers/131120.sql) | MONTH, IS NOT NULL, DATE_FORMAT |
 | 24 | [월별 잡은 물고기 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/293260) | Lv.2 | 코드 검토 정답, 사이트 채점 미확인 | [293260.sql](../solutions/programmers/293260.sql) | MONTH, GROUP BY, COUNT, ORDER BY |
 
 ## 주요 오답·보완 사항
@@ -116,3 +116,9 @@ DATE 컬럼에는 연도 범위 조건도 학습 권장.
 6. CH05 서브쿼리 문제 본격 제출.
 
 **실제 실행·검증은 하지 않았습니다.** 최종 SQL 원문/학습 이력은 사용자 제공 내용 기반입니다.
+
+## 2026-11-06 후속 재풀이
+
+- 기존 목록 10번 151138: 날짜에 `DATE_FORMAT` 적용한 재제출 SQL로 사용자 사이트 통과 보고. 최신 SQL은 [151138.sql](../solutions/programmers/151138.sql).
+- 기존 목록 23번 131120: 생년월일에 `DATE_FORMAT` 적용한 재제출 SQL로 사용자 사이트 통과 보고. 최신 SQL은 [131120.sql](../solutions/programmers/131120.sql).
+- 두 문제는 **기존 문제의 재풀이이므로 신규 도전 수에 중복 포함하지 않음**.
