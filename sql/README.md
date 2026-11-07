@@ -1,6 +1,6 @@
 # SQL 학습 기록 — 실전 문제 중심, 반복 회독
 
-**업데이트: 2026-11-06 · MySQL 기반**  
+**업데이트: 2026-11-07 · MySQL 기반**  
 목표: 프로그래머스 SQL 고득점 Kit의 주요 문법 습득 → 응용 SQL 실력 확보 → 이후 LeetCode/SolveSQL 및 PCSQL 수준 문제 선택 학습.
 
 ## 운영 원칙
@@ -73,3 +73,10 @@
 
 - 바로 이어서: [가격대 별 상품 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131530), [카테고리 별 도서 판매량](https://school.programmers.co.kr/learn/courses/30/lessons/144855), [조건에 맞는 사용자와 총 거래금액](https://school.programmers.co.kr/learn/courses/30/lessons/164668), [자동차 대여중/대여 가능 여부](https://school.programmers.co.kr/learn/courses/30/lessons/157340), [저자 별 카테고리 별 매출액](https://school.programmers.co.kr/learn/courses/30/lessons/144856) (Lv.4 도전).
 - 서브쿼리 의존 문제는 CH10 후반부로 미룸. CH06 문제는 사용자가 직접 작성하기 전 모범 SQL 비공개.
+
+## 2026-11-07 추가 실전 기록
+
+- [부서별 평균 연봉 조회하기 · Lv.3 (284529)](https://school.programmers.co.kr/learn/courses/30/lessons/284529): 사용자 직접 SQL 정답 통과 보고 · 체감 **쉬움**. [원문 SQL](solutions/programmers/284529.sql) / [추가 실전 기록](reviews/2026-11-07-extra-practice.md).
+- [즐겨찾기가 가장 많은 식당 정보 출력하기 · Lv.3 (131123)](https://school.programmers.co.kr/learn/courses/30/lessons/131123): 현재 **서브쿼리 개념 학습 중, SQL 미제출**. 신규 도전으로 집계하지 않음.
+- 이전 README의 **68문제**는 2026-11-06 저장 당시 기준. 이후 대화에서 추가 도전한 문제와 현재 기록을 합친 사용자 대화상 누적은 **79/106문제 도전** (미완성·오답 시도 포함), 최초 SQL 미작성 **27문제**. 이번 커밋은 **284529만 추가 저장**하고 그 밖의 대화 중 미커밋 풀이 원문을 임의로 생성하지 않음.
+- 사용자가 명시적으로 기록을 요청한 284529의 경우 요청에 따라 단독 저장. 다른 보류/미완료 문제는 해당 학습 묶음 완료 시 일괄 기록.
