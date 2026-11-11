@@ -1,7 +1,7 @@
 -- 코드를 입력하세요
 SELECT (CONCAT('/home/grep/src/', file.BOARD_ID, '/', file.FILE_ID, file.FILE_NAME, file.FILE_EXT)) AS FILE_PATH
 FROM (
-        SELECT *
+        SELECT BOARD_ID
         FROM USED_GOODS_BOARD
         ORDER BY VIEWS DESC
         LIMIT 1
