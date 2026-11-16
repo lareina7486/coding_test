@@ -1,7 +1,20 @@
 # SQL 학습 기록 — 실전 문제 중심, 반복 회독
 
-**업데이트: 2026-11-07 · MySQL 기반**  
+**업데이트: 2026-11-16 · MySQL 기반**  
 목표: 프로그래머스 SQL 고득점 Kit의 주요 문법 습득 → 응용 SQL 실력 확보 → 이후 LeetCode/SolveSQL 및 PCSQL 수준 문제 선택 학습.
+
+## 최신 학습 현황 (2026-11-16)
+
+**프로그래머스 SQL 전체 106문제 중 최초 도전 81개 (76.4%), 아직 최초 도전하지 않은 문제 25개.** 도전 수에는 오답이 포함되며 동일 문제 재도전은 중복 계산하지 않는다. 아래 오래된 68/106·79/106 숫자는 **각 날짜에 저장된 과거 스냅샷**이다.
+
+- **[2026-11-16 학습 전체 동기화 내역](reviews/2026-11-16-complete-sync.md)**: 기존 기록과 이번 대화에서 빠진 SQL 원문·오답 이력·플랫폼/코드검토/보류 상태·개념을 대조해 반영함. 출처 확인이 안 되는 최종 SQL은 생성하지 않음.
+- **[남은 32문제 유형별 전체 목록](chapters/remaining-32-groups-overview.md)** / [CSV 진도표](tracking/remaining-32.csv): 8그룹, 3개 플랫폼 통과·29개 미완료. 문제 정렬은 유형별 **Lv 오름차순 → 동레벨 정답률 내림차순**.
+- **1그룹 2/2 통과:** [기본 조건·NULL·문자열 기록](chapters/remaining-32-group-01-null-string.md). **2그룹 1/3 통과:** [157340 재도전 및 날짜·대여요금 기록](chapters/remaining-32-group-02-date-period.md). 현재 151141은 다중 JOIN 개념 학습까지 진행, **사용자 SQL 미제출**.
+- **[CH06 GROUP BY·JOIN](chapters/06-group-by-join-application.md)** · **[CH07 비트연산](chapters/07-bitwise-practice.md)** · **[CH08 실무 집계](chapters/08-applied-join-aggregation.md)** · **[CH09 윈도우 함수](chapters/09-window-functions-intro.md)** · **[CH10 서브쿼리·CTE](chapters/10-subqueries-cte-progress.md)** · [SQL 핵심 개념 노트](chapters/sql-core-concept-notes-2026-11.md).
+- `solutions/programmers/`는 사용자가 실제 작성한 정답 통과 또는 코드 검토 답안, `attempts/programmers/`는 사용자가 실제 작성한 **오답 초안**을 보관. 강의에서 설명한 대안 SQL은 사용자 제출 코드가 아님.
+- 사용자 요구: **오답은 힌트 한 개씩·정답 먼저 공개 금지**, 정답 후 **다른 방법 2~3가지 비교**, **문제마다 남은 유형 전체 목록 표시**, 완료한 학습 묶음 단위로 GitHub 일괄 기록.
+
+---
 
 ## 운영 원칙
 
